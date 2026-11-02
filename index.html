@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>LinkLens | Analytics Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Website Heading -->
+    <header>
+        <h1>LinkLens</h1>
+        <p>
+            Smart URL Shortener & Analytics Dashboard
+        </p>
+    </header>
+
+    <!-- URL Shortener -->
+    <section class="shortener">
+
+        <h2>Shorten Your Links</h2>
+
+        <input
+            type="url"
+            id="longUrl"
+            placeholder="Paste your long URL here"
+        >
+
+        <button id="shortenBtn">
+            Shorten URL
+        </button>
+
+        <div id="result"></div>
+
+    </section>
+
+    <!-- Analytics Dashboard -->
+    <section class="dashboard">
+
+        <h2>Analytics Dashboard</h2>
+
+        <div class="stats-container">
+
+            <div class="stat-card">
+                <h3>Total Links</h3>
+                <h2 id="totalLinks">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <h3>Total Clicks</h3>
+                <h2 id="totalClicks">0</h2>
+            </div>
+
+        </div>
+
+        <h2>Your Link History</h2>
+
+        <button id="refreshBtn">
+            Refresh Analytics
+        </button>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Original URL</th>
+                        <th>Short URL</th>
+                        <th>Clicks</th>
+                    </tr>
+                </thead>
+
+                <tbody id="linksTableBody">
+                    <tr>
+                        <td colspan="3">
+                            Loading analytics...
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>LinkLens | Smart Link Management</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
